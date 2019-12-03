@@ -5,7 +5,7 @@ A php interpreter for the french language, have fun!
 PHP >= 5.4
 
 # How to use:
-php <compiler> <file to run>
+php compiler file-to-run
 e.g.
 php frenchify.php testfile.french
 
