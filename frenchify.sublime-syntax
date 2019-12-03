@@ -1,0 +1,61 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Frenchify
+file_extensions:
+  - french
+scope: source.french
+contexts:
+  main:
+    - match: \/\/.+
+      comment: Unused Words
+      scope: comment.line.double-slashcomment.line.double-slash
+    - match: '([\w\d\_]+)\s\s*(=)'
+      comment: Variables
+      captures:
+        1: support.function
+        2: keyword.other.ssraw
+    - match: '([0-9\.]+)'
+      comment: Numeric Constants
+      scope: constant.numeric.ssraw
+    - match: '\"[^\"]*\"'
+      comment: double quoted word
+      scope: string.quoted.double
+    - match: '\''[^\'']*\'''
+      comment: Single quoted word
+      scope: string.quoted.single
+    - match: ^\s*(set|dire|classe|fonction|au revoir)\s\s*
+      comment: Built In words
+      scope: keyword.other.ssraw
+      captures:
+        1: variable.language
+    - match: '([\$\w\d]+)(->)([\w\d]+)'
+      comment: Sequences like ->
+      scope: keyword.other.ssraw
+      captures:
+        1: entity.name.type
+        2: constant.character.escape.ssraw
+        3: entity.name.function
+    - match: (\/\*)(.+)
+      comment: Comment Blocks
+      captures:
+        1: comment.line.double-slashcomment.line.double-slash
+        2: comment.line.double-slashcomment.line.double-slash
+      push:
+        - meta_scope: variable.complex.ssraw
+        - match: (\*\/)
+          captures:
+            1: comment.line.double-slashcomment.line.double-slash
+          pop: true
+        - include: main
+        - match: .
+          scope: comment.line.double-slashcomment.line.double-slash
+    - match: '\$\w+[\w\d]*\s'
+      comment: Variables Used
+      scope: keyword.other.ssraw
+    - match: '([\w\d\_]+)\((.*)\)'
+      comment: Functions
+      scope: support.other
+      captures:
+        1: support.function
+        2: variable.parameter

@@ -1,0 +1,105 @@
+// Basic Comment
+
+
+/**
+ * Remove Comments from file
+ * @param  String $parse $12314124124213 Parse to String
+ * @return String Without comment
+ */
+
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+// Variables
+set txt = "Bonjour le monde!"
+set x = 5
+set y = 10.5
+
+// Output Function
+dire 'Bonjour le monde!'
+dire $txt
+dire $x
+dire $y
+
+// Data Types
+set x = "Bonjour le monde!"
+set y = 'Bonjour le monde!'
+
+dire $x
+dire $y
+dire "<br>"
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+
+/**
+ * Remove Comments from file
+ * @param  String $parse Parse to String
+ * @return String Without comment
+ */
+
+// Integer
+deboguer(123123)
+
+// Float
+deboguer(10.365)
+
+// Boolean
+deboguer(true, false)
+
+// Array
+deboguer(qweqwqwe)
+
+
+// Object
+classe Voiture
+{
+    fonction courir()
+    {
+        set ce->model = "quewuqeqweqwe"
+
+        dire $ce->model
+    }
+}
+
+set herbie = Nouveau Voiture
+
+var_dump($herbie);
+
+// Null Type
+set x = "Hello world!"
+set x = null
+//var_dump($x)
+
+// Exit
+au revoir
